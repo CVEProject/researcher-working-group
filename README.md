@@ -41,13 +41,13 @@ Everything up to this point is basically background or preliminary.
 
 Dibs Protocol really starts here!
 
-5.0 R sends a Dibs Request message to the channel, which means creating a new issue in this repo
+5.0 R sends a Dibs-Request message to the channel, which means creating a new issue in this repo
 
-5.1 The nature of this message is that R wants and plans to assign *unless* another CNA (possibly a CNA-LR) has a prior or competing claim. That is, by default and without a conflicting response within the timeout period, R will be clear to assign.
+5.1 The nature of this message is that R wants and plans to assign *unless* another CNA (possibly a CNA-LR) has a prior or competing claim. That is, by default and without a colliding response within the timeout period, R will be clear to assign.
 
 5.2 Channel participants have N hours to respond.
 
-Dibs Request messages are ordered by time, when an issue was created or a comment added.
+Dibs-Request messages are ordered by time, when an issue was created or a comment added.
 
 5.2.1 We may distinguish between two classes of Publicly Disclosed vulnerabilities, hot or not.
 
@@ -55,13 +55,13 @@ Dibs Request messages are ordered by time, when an issue was created or a commen
 
 5.2.1.2 Not. Old, stale, not recent, not getting attention, low value in getting a CVE ID quickly, but value in getting an ID at all. For this class, the Dibs Protocol may not be necessary, as the requesting CNA can talk to the CNA-LR through regular, non-urgent channels (e.g., cveform.mitre.org for the MITRE CNA-LR).
 
-5.3 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims.
+5.3 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims. A Dibs-Agree message is reassuring, informational, and optional.
 
-5.4 If one or more participants respond in conflict, the participants should try to work it out, quickly (maybe another time limit). If they can't, Root / CNA-LR. If CNAs have differen Roots, then what?
+5.4 If one or more participants respond in conflict (let's call this a collision, so, a Dibs-Collision message), the participants should try to work it out, quickly (maybe another time limit). If they can't, Root / CNA-LR. If CNAs have differen Roots, then what?
 
-5.4.1 CNA2 responds in conflict to R (R is also CNA1). The conflicting CNAs should consider factors including: which CNA started working on the assignment earlier, has more appropriate scope, has better information, was involved in CVD.
+5.4.1 CNA2 responds with a Dibs-Collision message to R (R is also CNA1). The colliding CNAs should consider factors including: which CNA started working on the assignment earlier, has more appropriate scope, has better information, was involved in CVD.
 
-5.5 If the timer expires without a conflicting response, R has Dibs and is clear to assign and publish.
+5.5 If the timer expires without a Dibs-Collision message, R has Dibs and is clear to assign and publish.
 
 5.5.1 R informs the channel of the assignment. At this point, no other CNAs may assign without additionally discussing with R and R's agreement.
 
