@@ -11,7 +11,7 @@ The CVE Researcher Working Group ([RWG](https://cve-cwe-programs.groups.io/g/RWG
 
 Placeholder for the concise version. See below for important details.
 
-0. Required conditions: Vulnerability is Publicly Disclosed and hot.
+0. Required conditions: Vulnerability is Publicly Disclosed, hot (urgent, see below), and requester is a CNA with reasonable scope.
 
 1. CNA1 makes a Dibs-Request by opening an issue.
 
@@ -29,7 +29,7 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 1.0 Someone, call them the Requester (R), observes the Publicly Disclosed Vulnerability lacking a CVE ID. R may be just somebody on the internet (goto 2.0) or R may be a CNA (goto 3.0).
 
-2.0 If R is not a CNA then:
+2.0 (This branch is essentially irrelevant to the Dibs protocol, but documented anyway.) If R is not a CNA then:
 
 2.1 R makes an assignment request of a CNA with appropriate scope (CNA1).
 
