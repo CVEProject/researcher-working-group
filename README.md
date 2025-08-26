@@ -75,11 +75,15 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.5 If a participant (CNA2, or more, CNA3...) responds in conflict (let's call this a collision, so, a Dibs-Collision message), the participants should try to work it out, quickly (maybe another time limit). If they can't, escalate to Root / CNA-LR. If CNAs have differen Roots, then what?
 
-5.5.1 (Escalating to Roots/CNA-LRs is not fast, which is counter to the need for and value in a quick assignment).
+5.5.1 A CNA-LR MAY delegate assignment to R or another appropriate CNA participating in the Dibs-Request.
 
-5.5.2 CNA2 responds with a Dibs-Collision message to R (R is also CNA1). This is a comment on the Dibs-Request issue. The colliding CNAs should consider factors including: which CNA started working on the assignment earlier, has more appropriate scope, has better information, was involved in CVD, really really cares more.
+5.5.2 If a CNA-LR already has a pending request, the CNA-LR SHOULD assign, quickly (see 5.6.2 and 5.6.3)
 
-5.5.3 Remember the goal is quick assignment. We want some level of quality and to avoid duplicates and thrashing, but nobody gets a prize for winning Dibs. We all get a prize for a decent quality CVE going out quickly. Prizes for everyone playing Dibs.
+5.5.2 (Escalating to Roots/CNA-LRs is not fast, which is counter to the need for and value in a quick assignment).
+
+5.5.3 CNA2 responds with a Dibs-Collision message to R (R is also CNA1). This is a comment on the Dibs-Request issue. The colliding CNAs should consider factors including: which CNA started working on the assignment earlier, has more appropriate scope, has better information, was involved in CVD, really really cares more. See 5.5.2, a CNA-LR with a pending request has priority.
+
+5.5.4 Remember the goal is quick assignment. We want some level of quality and to avoid duplicates and thrashing, but nobody gets a prize for winning Dibs. We all get a prize for a decent quality CVE going out quickly. Prizes for everyone playing Dibs.
 
 5.6 If the timer expires without a Dibs-Collision message, R has Dibs and is clear to assign and publish.
 
