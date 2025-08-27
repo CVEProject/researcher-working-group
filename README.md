@@ -11,7 +11,7 @@ The CVE Researcher Working Group ([RWG](https://cve-cwe-programs.groups.io/g/RWG
 
 Placeholder for the concise version. See below for important details.
 
-0. Required conditions: Vulnerability is Publicly Disclosed, hot (urgent, see below), and requester is a CNA with reasonable scope.
+0. Required conditions: Vulnerability is Publicly Disclosed, hot (urgent, see below), and requester is a CNA with reasonable scope, and an intention of both assigning and publishing a CVE record.
 
 1. CNA1 makes a Dibs-Request by opening an issue.
 
@@ -51,9 +51,9 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 3.2.1 (Note that lessons learned from this experiment may result in changes to the assignment rules (4.2 rules), but for the time being, this protocol follows the current rules.)
 
-4.0 R (who is CNA1) decides to assign.
+4.0 R (who is CNA1) intends to assign, once assignment-ready conditions are determined.
 
-4.1 (Everything up to this point is basically background or preliminary. CVE-DIBS really starts here, when a CNA wants to assign for a Publicly Disclosed Vulnerability.)
+4.1 (Everything up to this point is basically background or preliminary. CVE-DIBS really starts here, when a CNA intends to assign for a Publicly Disclosed Vulnerability.)
 
 5.0 R sends a Dibs-Request message to the channel, which means creating a new issue in this repo. The title of the issue starts with "Dibs-Request: " followed by a concise phrase that MUST identify the affected Product (and MAY include other words).
 
@@ -71,7 +71,7 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.3.2 Not. Old, stale, not recent, not getting attention, not EITW, low value in getting a CVE ID quickly, but value in getting an ID at all. For this class, the Dibs Protocol may not be necessary, as the requesting CNA can talk to the CNA-LR through regular, non-urgent channels (e.g., cveform.mitre.org for the MITRE CNA-LR). Example: OpenBSD Errata. Or maybe we use CVE-DIBS with a longer timeout, 72 hours? Three "business" days? One week?
 
-5.4 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims. A Dibs-Agree message is reassuring, informational, and optional.
+5.4 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims. A Dibs-Agree message is reassuring, informational, and optional. Generally, these are "negative" responses -- the responding participant has no intent to assign.
 
 5.5 If a participant (CNA2, or more, CNA3...) responds in conflict (let's call this a collision, so, a Dibs-Collision message), the participants should try to work it out, quickly (maybe another time limit). If they can't, escalate to Root / CNA-LR. If CNAs have differen Roots, then what?
 
@@ -87,10 +87,8 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.6 If the timer expires without a Dibs-Collision message, R has Dibs and is clear to assign and publish.
 
-5.6.1 R informs the channel of the assignment. At this point, no other CNAs may assign without additionally discussing with R and with R's agreement. This is another message type (Dibs-Confirm?). A comment on the Dibs-Request issue. Close the issue? Tags and resolutions would probably help.
+5.6.1 R informs the channel of the assignment (notably, before publishing). At this point, no other CNAs shall assign without additionally discussing with R and with R's agreement. This is another message type (Dibs-Confirm?). A comment on the Dibs-Request issue. Close the issue? Tags and resolutions would probably help.
 
 5.6.2 R MUST act fast. No sandbagging. If some timeout (2 hours?) is reached, Dibs reopens? Or Root / CNA-LR takes over?
 
-5.6.3 After assignment and publication, the usual rules and policies apply. An assignment or Record content can be disputed or rejected, ownership can be transferred.
-
-6.0 R can send a PLA (Public Lacking Assignment) message to the channel. Dibs-Observed? In this case, the CNA is not claiming Dibs but alerting the channel, presumably with the idea that another CNA might want Dibs. In this case, maybe just go to a Root/CNA-LR?
+5.6.3 After assignment and publication, the usual rules and policies apply. An assignment or Record content can be disputed, or rejected, or transfered to another CNA.
