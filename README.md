@@ -73,7 +73,9 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.4 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims. A Dibs-Agree message is reassuring, informational, and optional. Generally, these are "negative" responses -- the responding participant has no intent to assign.
 
-5.5 If a participant (CNA2, or more, CNA3...) responds in conflict (let's call this a collision, so, a Dibs-Collision message), the participants should try to work it out, quickly (maybe another time limit). If they can't, escalate to Root / CNA-LR. If CNAs have differen Roots, then what?
+5.4.1 If a (which? the? the MITRE?) CNA-LR responds that the CNA-LR does not have any open requests or activity (Dibs-Agree), does this end the waiting period and allow the Requester to proceed? Or must the timer expire, giving other CNAs (including other CNA-LRs) a chance to send a Dibs-Collision message?
+
+5.5 If a participant (CNA2, or more, CNA3...) responds in conflict (let's call this a collision, so, a Dibs-Collision message), the participants should try to work it out, quickly (maybe another time limit). If they can't, escalate to Root / CNA-LR. If CNAs have differen Roots, then what? CNA2 may be a CNA-LR.
 
 5.5.1 A CNA-LR MAY delegate assignment to R or another appropriate CNA participating in the Dibs-Request.
 
@@ -91,4 +93,6 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.6.2 R MUST act fast. No sandbagging. If some timeout (2 hours?) is reached, Dibs reopens? Or Root / CNA-LR takes over?
 
-5.6.3 After assignment and publication, the usual rules and policies apply. An assignment or Record content can be disputed, or rejected, or transfered to another CNA.
+5.6.3 After (or as part of) informing the channel, R closes the GitHub issue.
+
+5.7 After assignment and publication, the usual rules and policies apply. An assignment or Record content can be disputed, or rejected, or transfered to another CNA.
