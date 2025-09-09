@@ -15,11 +15,17 @@ Placeholder for the concise version. See below for important details.
 
 1. CNA1 makes a Dibs-Request by opening an issue.
 
-2. Within N hours, if nobody responds with a collision (competing claim), CNA1 is clear to proceed.
+2. Within 8 hours, if nobody responds with a collision (competing claim), CNA1 is clear to proceed.
 
-3. If someone (CNA2) does respond with a collision within N hours, work it out quickly, priority goes to earliest claim of substantial involvement (ongoing CVD, analysis work, scope, etc.).
+3. Open question:
 
-4. If no agreement, go to Root/CNA-LR.
+3.1 The full length of the timer must expire, giving time for other participating CNAs to respond.
+
+3.2 The timer may end early with some sort of sufficient consensus among participants. How do we define "sufficient consensus?" At least one CNA-LR must NACK? Some proportion of participants NACK?
+
+4. If someone (CNA2) does respond with a collision before the timer expires, work it out quickly, priority goes to earliest claim of substantial involvement (ongoing CVD, research, analysis work, scope, etc.).
+
+5. If no agreement, go to Root/CNA-LR.
 
 ## CVE-DIBS Protocol (TL)
 
@@ -61,7 +67,7 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.2 The nature of the Dibs-Request is that R as done the homework, wants and is ready to assign *unless* another CNA (possibly a CNA-LR) has a prior or competing claim. By default and without a colliding response within the timeout period, R will be clear to assign.
 
-5.2 Channel participants have N hours to respond.
+5.2 Channel participants have 8 hours to respond.
 
 5.2.1 Dibs-Request messages are ordered by time, when an issue was created or a comment added, according to GitHub.
 
@@ -70,6 +76,10 @@ The detailed version. This is largely copied mostly from the Google notes docume
 5.3.1 Hot. New, recent, fresh, getting public attention (socials, media), possibly EITW, possibly lacking a clear and authoritative fix, FUD, thrashing, not-working fixes... High pressure and high value in assigning a CVE ID quickly. Examples: CrushFTP.
 
 5.3.2 Not. Old, stale, not recent, not getting attention, not EITW, low value in getting a CVE ID quickly, but value in getting an ID at all. For this class, the Dibs Protocol may not be necessary, as the requesting CNA can talk to the CNA-LR through regular, non-urgent channels (e.g., cveform.mitre.org for the MITRE CNA-LR). Example: OpenBSD Errata. Or maybe we use CVE-DIBS with a longer timeout, 72 hours? Three "business" days? One week?
+
+Note: Not hot doesn't belong here in the Dibs chanel, so remove 5.3.2.
+
+5.x The full 8 hour timer must expire, giving time for other participating CNAs to respond.
 
 5.4 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims. A Dibs-Agree message is reassuring, informational, and optional. Generally, these are "negative" responses -- the responding participant has no intent to assign.
 
