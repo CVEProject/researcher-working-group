@@ -11,13 +11,21 @@ The CVE Researcher Working Group ([RWG](https://cve-cwe-programs.groups.io/g/RWG
 
 Placeholder for the concise version. See below for important details.
 
-0. Required conditions: Vulnerability is Publicly Disclosed, hot (urgent, see below), and requester is a CNA with reasonable scope, and an intention of both assigning and publishing a CVE record.
+0. Required criteria for opening a Dibs-Request:
 
-1. CNA1 makes a Dibs-Request by opening an issue.
+0.1 Vulnerability is Publicly Disclosed
 
-2. Within 8 hours, if nobody responds with a collision (competing claim), CNA1 is clear to proceed.
+0.2 Vulnerability is "hot" (urgent, see below)
 
-3. Open question:
+0.3 Requester is a CNA with reasonable scope and an intention of both assigning and publishing a CVE record
+
+0.4 and Supplier of the affected Product is *not* a CNA.
+
+2. CNA1 makes a Dibs-Request by opening an issue.
+
+3. Within 8 hours, if nobody responds with a collision (competing claim), CNA1 is clear to proceed.
+
+4. Open question:
 
 3.1 The full length of the timer must expire, giving time for other participating CNAs to respond.
 
@@ -75,11 +83,13 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.3.1 Hot. New, recent, fresh, getting public attention (socials, media), possibly EITW, possibly lacking a clear and authoritative fix, FUD, thrashing, not-working fixes... High pressure and high value in assigning a CVE ID quickly. Examples: CrushFTP.
 
-5.3.2 Not. Old, stale, not recent, not getting attention, not EITW, low value in getting a CVE ID quickly, but value in getting an ID at all. For this class, the Dibs Protocol may not be necessary, as the requesting CNA can talk to the CNA-LR through regular, non-urgent channels (e.g., cveform.mitre.org for the MITRE CNA-LR). Example: OpenBSD Errata. Or maybe we use CVE-DIBS with a longer timeout, 72 hours? Three "business" days? One week?
+5.3.2 Not. Follow existing guidance, which is essentially to request assignment or delegation from a CNA-LR.
 
-Note: Not hot doesn't belong here in the Dibs chanel, so remove 5.3.2.
+5.x Open question:
 
-5.x The full 8 hour timer must expire, giving time for other participating CNAs to respond.
+5.x.1 The full length of the timer must expire, giving time for other participating CNAs to respond.
+
+5.x.2 The timer may end early with some sort of sufficient consensus among participants. How do we define "sufficient consensus?" At least one CNA-LR must NACK? Some proportion of participants NACK?
 
 5.4 If a participant responds in agreement, great, that's nice, optional, but can help R learn that other participants are not making conflicting claims. A Dibs-Agree message is reassuring, informational, and optional. Generally, these are "negative" responses -- the responding participant has no intent to assign.
 
