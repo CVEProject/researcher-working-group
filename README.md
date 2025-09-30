@@ -13,7 +13,7 @@ One, perhaps *the* fundamental issue is that multiple CNAs may be in a position 
 
 More concise vesion of the protocol. See below for more detail.
 
-0. All of the following criteria must be met for opening a Dibs-Request:
+0 All of the following criteria must be met for opening a Dibs-Request:
 
 0.1 Vulnerability is [Publicly Disclosed](https://www.cve.org/ResourcesSupport/Glossary#glossaryPubliclyDisclosed)
 
@@ -23,19 +23,17 @@ More concise vesion of the protocol. See below for more detail.
 
 0.4 Supplier of the affected Product is *not* a CNA.
 
-2. CNA1 makes a Dibs-Request by opening an issue.
+1 CNA1 makes a Dibs-Request by opening an issue.
 
-3. Within 8 hours, if nobody responds with a collision (competing claim), CNA1 is clear to proceed.
+2 Within 8 hours, if nobody responds with a collision (competing claim), CNA1 is clear to proceed.
 
-4. Open question:
+2.1 Open question: Must the full length of the timer must expire, giving time for other participating CNAs to respond? Or can the timer may end early with some sort of sufficient consensus among participants. How do we define "sufficient consensus?" At least one CNA-LR must NACK? Some proportion of participants NACK?
 
-3.1 The full length of the timer must expire, giving time for other participating CNAs to respond.
+3 If someone (CNA2) does respond with a collision before the timer expires, work it out quickly, priority goes to earliest claim of substantial involvement (ongoing CVD, research, analysis work, scope, etc.).
 
-3.2 The timer may end early with some sort of sufficient consensus among participants. How do we define "sufficient consensus?" At least one CNA-LR must NACK? Some proportion of participants NACK?
+4 Selected CNA assigns and publishes expeditiously.
 
-4. If someone (CNA2) does respond with a collision before the timer expires, work it out quickly, priority goes to earliest claim of substantial involvement (ongoing CVD, research, analysis work, scope, etc.).
-
-5. If no agreement, go to Root/CNA-LR.
+5 If no agreement, go to Root/CNA-LR.
 
 ## Detailed CVE-DIBS Protocol
 
