@@ -3,23 +3,25 @@
 ## Overview
 
 This repository is an experimental channel to coordinate CVE ID assignments for Publicly Disclosed vulnerabilities, per the
-as-yet-to-be-designed CVE Distributed Interrogative Basic System (CVE-DIBS) protocol. But also see below where we draft the CVE-DIBS protocol!
+work-in-progress CVE Distributed Interrogative Basic System (CVE-DIBS) protocol. See below where we are drafting the CVE-DIBS protocol!
 
 The CVE Researcher Working Group ([RWG](https://cve-cwe-programs.groups.io/g/RWG)) is working to improve how CVE IDs are assigned quickly and accurately for Publicly Disclosed vulnerabilities, especially "hot" topics (e.g., recent, exploited in the wild, lacking remediation).  The RWG has some [working notes](https://docs.google.com/document/d/18ApPD0s7o55jE8Lj-YjC5QywroMUFtf1d7Trr9IVtTE).
 
-## CVE-DIBS Protocol (TLDR)
+One, perhaps *the* fundamental issue is that multiple CNAs may be in a position to assign for the same Publicly Disclosed vulnerability. The CNAs involved may have scope, standing, be involved in research or coordination, be CNA-LRs, or otherwise be handling assignment requests. Requesters sometimes request assignment from multiple CNAs concurrently. The protocol is designed to expedite assignment and reduce the chance of duplicates or collisions.
 
-Placeholder for the concise version. See below for important details.
+## Concise CVE-DIBS Protocol
 
-0. Required criteria for opening a Dibs-Request:
+More concise vesion of the protocol. See below for more detail.
 
-0.1 Vulnerability is Publicly Disclosed
+0. All of the following criteria must be met for opening a Dibs-Request:
 
-0.2 Vulnerability is "hot" (urgent, see below)
+0.1 Vulnerability is [Publicly Disclosed](https://www.cve.org/ResourcesSupport/Glossary#glossaryPubliclyDisclosed)
 
-0.3 Requester is a CNA with reasonable scope and an intention of both assigning and publishing a CVE record
+0.2 Vulnerability is "hot" (urgent, see 5.3.1 below)
 
-0.4 and Supplier of the affected Product is *not* a CNA.
+0.3 Dibs requester is a CNA with reasonable scope and intention to quickly assign and publish a CVE Record
+
+0.4 Supplier of the affected Product is *not* a CNA.
 
 2. CNA1 makes a Dibs-Request by opening an issue.
 
@@ -35,7 +37,7 @@ Placeholder for the concise version. See below for important details.
 
 5. If no agreement, go to Root/CNA-LR.
 
-## CVE-DIBS Protocol (TL)
+## Detailed CVE-DIBS Protocol
 
 The detailed version. This is largely copied mostly from the Google notes document, it's probably too detailed, make a shorter version starting with the core dibs activity. Also very much still a work in progress.
 
@@ -111,7 +113,7 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.6.1 R informs the channel of the assignment (notably, before publishing). At this point, no other CNAs shall assign without additionally discussing with R and with R's agreement. This is another message type (Dibs-Confirm?). A comment on the Dibs-Request issue. Close the issue? Tags and resolutions would probably help.
 
-5.6.2 R MUST act fast. No sandbagging. If some timeout (2 hours?) is reached, Dibs reopens? Or Root / CNA-LR takes over?
+5.6.2 R (or whichever CNA has DIBS) MUST act fast. No sandbagging. If some timeout (8 hours?) is reached, Dibs reopens? Or Root / CNA-LR takes over?
 
 5.6.3 After (or as part of) informing the channel, R closes the GitHub issue.
 
