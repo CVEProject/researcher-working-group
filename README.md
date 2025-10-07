@@ -2,12 +2,11 @@
 
 ## Overview
 
-This repository is an experimental channel to coordinate CVE ID assignments for Publicly Disclosed vulnerabilities, per the
-work-in-progress CVE Distributed Interrogative Basic System (CVE-DIBS) protocol. See below where we are drafting the CVE-DIBS protocol!
+This repository is an experimental channel to coordinate urgent CVE ID assignments for [Publicly Disclosed](https://www.cve.org/ResourcesSupport/Glossary#glossaryPubliclyDisclosed) vulnerabilities using the CVE Distributed Interrogative Basic System (CVE-DIBS) protocol. The protocol is designed to expedite assigning CVE IDs and publishing CVE Records while reducing or eliminating duplicate assignments or collisions. The CVE Researcher Working Group ([RWG](https://cve-cwe-programs.groups.io/g/RWG)) is developing the protocol through discussion and active experimentation.
 
-The CVE Researcher Working Group ([RWG](https://cve-cwe-programs.groups.io/g/RWG)) is working to improve how CVE IDs are assigned quickly and accurately for Publicly Disclosed vulnerabilities, especially "hot" topics (e.g., recent, exploited in the wild, lacking remediation).  The RWG has some [working notes](https://docs.google.com/document/d/18ApPD0s7o55jE8Lj-YjC5QywroMUFtf1d7Trr9IVtTE).
+There are perhaps two fundamental factors involved. The first is urgency, with the lack of a CVE ID hampering attempts to discuss, analyze, and communicate. The second is duplicate assignments or collisions. Multiple CNAs may have scope, standing, be involved in research or coordination, be CNA-LRs, or otherwise be handling assignment requests. Requesters sometimes request assignment from multiple CNAs concurrently, creating additional complexity (please don't do this).
 
-One, perhaps *the* fundamental issue is that multiple CNAs may be in a position to assign for the same Publicly Disclosed vulnerability. The CNAs involved may have scope, standing, be involved in research or coordination, be CNA-LRs, or otherwise be handling assignment requests. Requesters sometimes request assignment from multiple CNAs concurrently. The protocol is designed to expedite assignment and reduce the chance of duplicates or collisions.
+See also [Introducing CVE-DIBS](https://docs.google.com/document/d/1VTIhNzfgk66ZO-M6uplrYMvINfud5ZaxrjgQk4boOQk) and the RWG [working notes](https://docs.google.com/document/d/18ApPD0s7o55jE8Lj-YjC5QywroMUFtf1d7Trr9IVtTE).
 
 ## Concise CVE-DIBS Protocol
 
@@ -31,7 +30,7 @@ More concise vesion of the protocol. See below for more detail.
 
 3 If someone (CNA2) does respond with a collision before the timer expires, work it out quickly, priority goes to earliest claim of substantial involvement (ongoing CVD, research, analysis work, scope, etc.).
 
-4 Selected CNA assigns and publishes expeditiously.
+4 Selected CNA assigns and publishes expeditiously (SHOULD within 2 hours, MUST within 24 hours).
 
 5 If no agreement, go to Root/CNA-LR.
 
@@ -111,7 +110,7 @@ The detailed version. This is largely copied mostly from the Google notes docume
 
 5.6.1 R informs the channel of the assignment (notably, before publishing). At this point, no other CNAs shall assign without additionally discussing with R and with R's agreement. This is another message type (Dibs-Confirm?). A comment on the Dibs-Request issue. Close the issue? Tags and resolutions would probably help.
 
-5.6.2 R (or whichever CNA has DIBS) MUST act fast. No sandbagging. If some timeout (8 hours?) is reached, Dibs reopens? Or Root / CNA-LR takes over?
+5.6.2 R (or whichever CNA has DIBS) MUST act fast, SHOULD publish within 2 hours, MUST publish within 24 hours. If this timeout is reached, Dibs reopens? Or Root / CNA-LR takes over?
 
 5.6.3 After (or as part of) informing the channel, R closes the GitHub issue.
 
