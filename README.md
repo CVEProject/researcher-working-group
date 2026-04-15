@@ -4,4 +4,4 @@ The CVE Researcher Working Group (RWG) was established in July 2025 and seeks to
 
 The July 2025 announcement about the RWG is [here](https://www.cve.org/Media/News/item/news/2025/07/01/CVE-Program-Adds-Researcher-WG-for-CNAs). 
 
-As of November 2025, RWG meetings are held weekly every other Tuesday at 2 PM U.S. Eastern Time. We would gladly add an additional meeting to allow for EMEA and APAC engagement if there's interest. Researcher and bug bounty CNAs in good standing can request to join the RWG [here](https://www.cve.org/ProgramOrganization/WorkingGroups#cve-how-to-join). 
+As of 2026, RWG meetings are held weekly every other Tuesday at 2 PM U.S. Eastern Time. We would gladly add an additional meeting to allow for EMEA and APAC engagement if there's interest. Researcher and bug bounty CNAs in good standing can request to join the RWG [here](https://www.cve.org/ProgramOrganization/WorkingGroups#cve-how-to-join). 
